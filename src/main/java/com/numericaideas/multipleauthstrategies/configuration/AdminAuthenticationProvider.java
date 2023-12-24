@@ -31,7 +31,6 @@ public class AdminAuthenticationProvider extends AbstractUserDetailsAuthenticati
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        System.out.println("Authenticate admin user");
         return super.createSuccessAuthentication("admin", authentication, retrieveUser("username", (UsernamePasswordAuthenticationToken) authentication));
     }
 
